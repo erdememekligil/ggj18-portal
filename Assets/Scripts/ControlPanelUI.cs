@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ControlPanelUI : MonoBehaviour {
@@ -15,6 +16,7 @@ public class ControlPanelUI : MonoBehaviour {
     public Toggle ChannelButton1, ChannelButton2, ChannelButton3, ChannelButton4;
     public Image ChannelScreen1, ChannelScreen2, ChannelScreen3, ChannelScreen4;
     public float AmplitudeRange = 0.8f;
+    public Button EndButton;
     
     private Dictionary<Toggle, Image> _screenMap = new Dictionary <Toggle, Image>();
     private List<Toggle> _choosenSwitches = new List<Toggle>();
@@ -49,6 +51,13 @@ public class ControlPanelUI : MonoBehaviour {
             Image cs = _screenMap[t];
             cs.material.SetFloat("_Amplitude", 0.0f);
         }
+
+        EndButton.onClick.AddListener(OnResetGame);
+    }
+
+    private void OnResetGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void OnGameOver()
