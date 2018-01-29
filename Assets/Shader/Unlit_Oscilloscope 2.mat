@@ -23,12 +23,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amplitude: 0.08125765
+    - _Amplitude: -0.79634905
     - _Origin: 0.48
     - _Phase: 95
     - _Speed: 1
     - _Thickness: 0.05
-    - _Zoom: 95
+    - _Zoom: 10
     m_Colors:
     - _BGColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 0.9338235, g: 0.63170415, b: 0.6879608, a: 1}
